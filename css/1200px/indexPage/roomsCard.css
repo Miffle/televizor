@@ -1,0 +1,28 @@
+.card{
+    background-color: var(--elements-background-color);
+    display: flex;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    width: 40vw;
+    position: relative;
+}
+#openRoom{
+    width: 40vw;
+}
+.preview{
+    width: 40vw;
+    border-radius: 10px;
+    margin-right: 1vw;
+}
+.creator{
+    color: var(--text-color);
+    position: absolute;
+    width: 20vw;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background-color: var(--elements-background-color);
+    font-size: larger;
+    font-weight: 500;
+    margin-right: 1vw;
+}

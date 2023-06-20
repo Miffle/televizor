@@ -1,0 +1,14 @@
+body {
+    --border-color: #424242;
+    --text-color: #E1E3E6;
+    --background-color: #141414;
+    --header-color: seagreen;
+    --elements-background-color: #222222;
+}
+body.light-theme{
+    --border-color: #DCE1E6;
+    --text-color: black;
+    --background-color:#EDEEF0;
+    --header-color: #F9F2DE;
+    --elements-background-color: #FFFFFF;
+}

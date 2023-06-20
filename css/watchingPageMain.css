@@ -1,0 +1,6 @@
+@import url(320px/watchingPage/main.css) (min-width: 320px);
+@import url(480px/watchingPage/main.css) (max-width: 480px);
+@import url(1200px/watchingPage/main.css) (min-width: 1200px);
+@import url(992-1199px/watchingPage/main.css) (min-width: 992px) and (max-width: 1199px);
+@import url(768-991px/watchingPage/main.css) (min-width: 768px) and (max-width: 991px);
+@import url(767px/watchingPage/main.css) (max-width: 767px) and (min-width: 481px);

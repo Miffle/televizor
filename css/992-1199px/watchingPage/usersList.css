@@ -1,0 +1,17 @@
+.user_in_group_container{
+    width: 100vw;
+    background-color: var(--elements-background-color);
+    color: var(--text-color);
+    margin-top: 1vh;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding-left: 1vw;
+}
+.usersTitle{
+    font-weight: bold;
+    font-size: large;
+}
+ul{
+    list-style-type: none;
+    padding-left: 2vw;
+}
