@@ -10,8 +10,8 @@
 
 @font-face {
     font-family: 'GolosTextWebVF';
-    src: url('/fonts/Golos/golos-text_vf.woff2') format('woff2'),
-    url('/fonts/Golos/golos-text_vf.woff') format('woff');
+    src: url('../fonts/Golos/golos-text_vf.woff2') format('woff2'),
+    url('../fonts/Golos/golos-text_vf.woff') format('woff');
 
     font-style: normal;
 }
