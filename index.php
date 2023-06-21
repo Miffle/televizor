@@ -65,14 +65,7 @@ session_start();
         <button class="reg_switch" id="auth_switch" type="button" onclick="loginForm()">Войти</button>
     </form>
 </div>
-<?php
-include "scripts/indexPage/main.php";
-//include "php_scripts/variables.php";
-//include "php_scripts/socket_connection.php";
-//include "php_scripts/mainPageScripts.php";
-//include "php_scripts/themeChanging.php";
-//include "php_scripts/authPopup.php";
-?>
+<?php include "scripts/indexPage/main.php";?>
 <script>
 
 

@@ -9,6 +9,8 @@
         socket.send(JSON.stringify({event: 'fetch_users_message', room_url}));
         socket.send(JSON.stringify({event: 'sync_with_host', room_url}));
     });
+
+    // Получаем сообщения от сервера
     socket.addEventListener('message', function (event) {
         const data = JSON.parse(event.data);
         // Обработка сообщений от сервера
@@ -34,6 +36,20 @@
         chatContainer.scrollTop = chatContainer.scrollHeight;
     }
 
+    function users_fetch(users) {
+        const UserList = document.getElementById("user_in_room");
+        while (UserList.firstChild) {
+            UserList.removeChild(UserList.firstChild);
+        }
+
+        for (var i = 0; i < users.length; i++) {
+            var username = users[i];
+            var li = document.createElement("li");
+            li.textContent = username;
+            UserList.appendChild(li);
+        }
+    }
+
     function sendMessage() {
         const message = messageInput.value.trim();
         if (lengthCheck(message) && emptyCheck(message)) {
@@ -45,6 +61,8 @@
         }
     }
 
+
+
     let message = ""; // Инициализируем переменную message вне обработчика событий
     messageInput.addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
@@ -54,6 +72,7 @@
             }
         }
     })
+
     messageInput.addEventListener("input", function () {
         clearTimeout(15);
         message = messageInput.value.trim(); // Обновляем message при изменении содержимого поля ввода
@@ -73,20 +92,6 @@
     function emptyCheck(message) {
         return message !== "";
 
-    }
-
-    function users_fetch(users) {
-        const UserList = document.getElementById("user_in_room");
-        while (UserList.firstChild) {
-            UserList.removeChild(UserList.firstChild);
-        }
-
-        for (var i = 0; i < users.length; i++) {
-            var username = users[i];
-            var li = document.createElement("li");
-            li.textContent = username;
-            UserList.appendChild(li);
-        }
     }
 
     function send_message_question() {
