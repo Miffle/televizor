@@ -10,12 +10,7 @@ session_start();
     <meta charset="UTF-8">
     <title>Televizor</title>
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="css/indexPageMain.css">
-<!--    <link rel="stylesheet" type="text/css" href="css/colors.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="css/desktop/head.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="css/desktop/main_page_style.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="css/desktop/roomsCard.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="css/desktop/authPopup.css">-->
+    <link rel="stylesheet" type="text/css" href="style/css/indexPageMain.css">
     <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
     <link rel="icon" href="source_files/icons/television_icon.png" type="image/x-icon">
 
@@ -25,7 +20,6 @@ session_start();
     <p class="title">Televizor</p>
     <?php
     $logout_href = '&quot;database/logout.php&quot;';
-    $auth_href = "&quot;authorization.php&quot;";
     if ($_SESSION['username'] != null) {
         echo '<div class="user_title">';
         echo '<p class="user_hello">Привет ' . $_SESSION["username"] . '!</p>';
@@ -38,10 +32,10 @@ session_start();
 </header>
 <h1>Кнопки создания комнат:</h1>
 <div class="creating_rooms">
-    <form action="create_room.php" method="post">
+    <form action="database/create_room.php" method="post">
         <input class="room_create_input" type="submit" value="Создать комнату">
     </form>
-    <form action="create_private_room.php" method="post">
+    <form action="database/create_private_room.php" method="post">
         <input class="private_room_create_input" type="submit" value="Создать приватную комнату">
     </form>
 </div>
@@ -72,18 +66,17 @@ session_start();
     </form>
 </div>
 <?php
-include "php_scripts/variables.php";
-include "php_scripts/socket_connection.php";
-include "php_scripts/mainPageScripts.php";
-include "php_scripts/themeChanging.php";
-include "php_scripts/authPopup.php";
+include "scripts/indexPage/main.php";
+//include "php_scripts/variables.php";
+//include "php_scripts/socket_connection.php";
+//include "php_scripts/mainPageScripts.php";
+//include "php_scripts/themeChanging.php";
+//include "php_scripts/authPopup.php";
 ?>
 <script>
-    socket.addEventListener('open', function (event) {
-        socket.send(JSON.stringify({event: 'OpenRoomGet', user}));
-    });
+
 
 </script>
-<script type="text/javascript" src="js/anijs-master/dist/anijs-min.js"></script>
+<script type="text/javascript" src="scripts/anijs-master/dist/anijs-min.js"></script>
 </body>
 </html>

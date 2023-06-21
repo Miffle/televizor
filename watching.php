@@ -1,7 +1,7 @@
 <?php
 session_start();
 if ($_SESSION['username'] == null) {
-    header("location: authorization.php");
+    header("location: ..");
 }
 if (!$_GET['url']) {
     header("location: ..");
@@ -17,7 +17,7 @@ if (!$_GET['url']) {
     <title>Televizor</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
-    <link rel="stylesheet" href="css/watchingPageMain.css">
+    <link rel="stylesheet" href="style/css/watchingPageMain.css">
     <link rel="icon" href="source_files/icons/television_icon.png" type="image/x-icon">
 
 </head>
@@ -57,15 +57,16 @@ if (!$_GET['url']) {
     </div>
 </div>
 <?php
-include "php_scripts/variables.php";
-include "php_scripts/socket_connection.php";
-include "php_scripts/themeChanging.php";
-include "php_scripts/video_in_room/video_sync_js.php";
-include "php_scripts/chat_scripts/room_and_users_js_functions.php";
-include "php_scripts/video_in_room/video_src_changing.php";
-include "php_scripts/watchingPageScripts.php";
-?>
-<script type="text/javascript" src="js/anijs-master/dist/anijs-min.js"></script>
+include 'scripts/watchingPage/main.php';
+//include "php_scripts/variables.php";
+//include "php_scripts/socket_connection.php";
+//include "php_scripts/themeChanging.php";
+//include "php_scripts/video_in_room/video_sync_js.php";
+//include "php_scripts/chat_scripts/room_and_users_js_functions.php";
+//include "php_scripts/video_in_room/video_src_changing.php";
+//include "php_scripts/watchingPageScripts.php";
+//?>
+<script type="text/javascript" src="scripts/anijs-master/dist/anijs-min.js"></script>
 </body>
 </html>
 

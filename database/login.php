@@ -17,12 +17,11 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
     if ($user_id > 0) {
         $_SESSION["username"] = $_POST["login"];
         header('Location: ..');
-        exit();
     } else {
-        header("Location: ../authorization.php");
-        exit();
+        header("Location: ..");
     }
+    exit();
 }
 
 mysqli_close($dbase);
-?>
+
