@@ -1,0 +1,7 @@
+.creating_rooms{
+    display: flex;
+    flex-wrap: wrap;
+}
+.room_create_input{
+    margin-bottom: 1vh;
+}

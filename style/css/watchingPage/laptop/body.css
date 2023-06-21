@@ -1,0 +1,9 @@
+body{
+    font-family: GolosTextWebVF, sans-serif;
+    font-variant: small-caps;
+    font-weight: 100;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
