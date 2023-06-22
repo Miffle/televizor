@@ -1,9 +1,7 @@
 @import url(../../colors.css);
 @import url(../../fonts.css);
 @import url(../../header.css);
-@import url(body.css);
 @import url(video.css);
 @import url(767px/video.css) (max-width: 767px) and (min-width: 481px);
 @import url(768-991px/video.css)  (min-width: 768px) and (max-width: 991px);
-@import url(chat.css);
 @import url(usersList.css);

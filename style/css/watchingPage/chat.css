@@ -7,7 +7,7 @@
     color: var(--text-color);
     background-color: var(--elements-background-color);
     outline: none;
-    transition: 1s;
+    transition: border-color 300ms linear;
 }
 .chat{
     margin-top: 1vh;

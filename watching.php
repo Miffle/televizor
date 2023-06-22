@@ -15,7 +15,7 @@ if (!$_GET['url']) {
 <head>
     <meta charset="UTF-8">
     <title>Televizor</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
     <link rel="stylesheet" href="style/css/watchingPageMain.css">
     <link rel="icon" href="source_files/icons/television_icon.png" type="image/x-icon">

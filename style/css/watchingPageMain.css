@@ -1,3 +1,5 @@
+@import url(watchingPage/chat.css);
+@import url(watchingPage/body.css);
 @import url(watchingPage/mobile/main.css) (min-width: 320px) and (max-width: 480px);
 @import url(watchingPage/tablet/main.css) (max-width: 991px) and (min-width: 481px);
 @import url(watchingPage/laptop/main.css) (min-width: 992px);

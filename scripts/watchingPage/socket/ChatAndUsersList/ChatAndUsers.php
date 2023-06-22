@@ -62,7 +62,6 @@
     }
 
 
-
     let message = ""; // Инициализируем переменную message вне обработчика событий
     messageInput.addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
@@ -105,8 +104,44 @@
     setInterval(send_message_question, 1000);
     setInterval(send_user_question, 5000);
 
-    window.addEventListener("beforeunload", function () {
-        socket.send(JSON.stringify({event: 'user_quit', user, room_url}));
-    });
+    function getBrowserName() {
+        var userAgent = navigator.userAgent;
+
+        var browserName;
+        if (userAgent.indexOf('Firefox') !== -1) {
+            browserName = 'Mozilla Firefox';
+        } else if (userAgent.indexOf('Chrome') !== -1) {
+            browserName = 'Google Chrome';
+        } else if (userAgent.indexOf('Safari') !== -1) {
+            browserName = 'Safari';
+        } else if (userAgent.indexOf('Opera') !== -1 || userAgent.indexOf('OPR') !== -1) {
+            browserName = 'Opera';
+        } else if (userAgent.indexOf('Edge') !== -1) {
+            browserName = 'Microsoft Edge';
+        } else if (userAgent.indexOf('Trident') !== -1) {
+            browserName = 'Internet Explorer';
+        } else {
+            browserName = 'Unknown';
+        }
+
+        return browserName;
+    }
+
+    var browser = getBrowserName();
+    if (browser !== "Safari") {
+        window.addEventListener("beforeunload", function () {
+            socket.send(JSON.stringify({event: 'user_quit', user, room_url}));
+        });
+    }else{
+        document.addEventListener('visibilitychange', function() {
+            if (document.visibilityState === 'hidden') {
+                // Событие visibilitychange вызывается, когда пользователь переключается на другую вкладку или сворачивает браузер.
+                socket.send(JSON.stringify({event: 'user_quit', user, room_url}));
+            }else{
+                socket.send(JSON.stringify({event: 'in_room_register', user, room_url}));
+            }
+        });
+    }
+
 
 </script>

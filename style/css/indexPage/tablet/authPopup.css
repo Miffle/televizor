@@ -20,7 +20,10 @@
     display: none;
 }
 .authorization_form, .registration_form{
-    margin-bottom: 3vh;
+    margin-bottom: 2vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 form>button{
     border-radius: 10px;
@@ -30,12 +33,14 @@ form>button{
     font-size: large;
     cursor: pointer;
     height: 3vh;
+    margin-bottom: 1vh;
 }
 form>h3{
     font-size: xx-large;
 }
-form>p{
+form>label{
     font-size: large;
+    margin-bottom: 1vh;
 }
 form>input{
     color: var(--text-color);
@@ -44,6 +49,7 @@ form>input{
     border: none;
     border-radius: 10px;
     outline: none;
+    margin-bottom: 2vh;
 }
 form>input::placeholder{
     text-align: center;
